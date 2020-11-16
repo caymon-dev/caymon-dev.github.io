@@ -18,3 +18,17 @@ menuItem.forEach(item => {
    })
 })
 
+
+
+const scroll = document.querySelector(".page-up");
+scroll.addEventListener('click', ()=>{
+   window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', function() {
+   if (pageYOffset > 500) {
+      scroll.style.cssText = "display: block";
+   } else {
+      scroll.style.cssText = "display: none";
+   }
+ });
